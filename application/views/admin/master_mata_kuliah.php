@@ -29,6 +29,7 @@
                     <th>No</th>
                     <th>Kode Matkul</th>
                     <th>Nama Matkul</th>
+                    <th>Prodi</th>
                     <th>Semester</th>
                     <th>Total SKS Teori</th>
                     <th>Total SKS Praktik</th>
@@ -42,6 +43,7 @@
                     <th>No</th>
                     <th>Kode Matkul</th>
                     <th>Nama Matkul</th>
+                    <th>Prodi</th>
                     <th>Semester</th>
                     <th>Total SKS Teori</th>
                     <th>Total SKS Praktik</th>
@@ -171,18 +173,23 @@
     },
     {
       targets: 3,
-      data: 'semester',
+      data: 'nama_prodi',
+      width: 500
     },
     {
       targets: 4,
-      data: 'tot_teori',
+      data: 'semester',
     },
     {
       targets: 5,
-      data: 'tot_praktik',
+      data: 'tot_teori',
     },
     {
       targets: 6,
+      data: 'tot_praktik',
+    },
+    {
+      targets: 7,
       data: 'status',
       render: function(data, type, row, meta) {
         let arr = [

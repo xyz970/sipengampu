@@ -90,7 +90,8 @@ class Api extends RestController
     $filter = [];
     if(isset($_GET['term'])) $like['nama'] = $this->input->get('term');
     if($id != NULL) $filter['id'] = $id;
-    $data = $this->matkul_model->read($filter, $like);
+    // $data = $this->matkul_model->read($filter, $like);
+    $data = $this->matkul_model->join($filter,$like,'prodi','prodi.id = matkul.prodi_id');
     $this->response([
       'success' => true,
       'message' => '',
